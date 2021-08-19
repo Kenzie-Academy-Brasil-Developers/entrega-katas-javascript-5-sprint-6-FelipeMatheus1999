@@ -117,7 +117,7 @@ const reverseSentence = sentence => {
         reverse.unshift(sentence[i]);
     }
     
-    return reverse.join(' -');
+    return reverse.join(' ');
 }
 
 const minimumValue = array => {
@@ -205,10 +205,10 @@ const evaluateExpression = (string, object) => {
         }
     }
 
-    return newString.join(' ');
-}
+    let expression = newString.join(' ');
 
-evaluateExpression('a + b + c - d', {a: 3, b: 4, c: 4, d: 2})
+    return eval(expression);
+}
 
 
 //Calling functions
